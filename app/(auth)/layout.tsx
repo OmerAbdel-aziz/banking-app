@@ -1,9 +1,16 @@
-import React from 'react'
+// app/auth/layout.tsx
+import React, { ReactNode } from 'react';
 
-const Authlayout = () => {
-  return (
-    <div>layout</div>
-  )
+interface AuthLayoutProps {
+  children: ReactNode;
 }
 
-export default Authlayout
+export default function AuthLayout({ children }: AuthLayoutProps) {
+  return (
+    <div>
+     
+      <main>{children}</main>
+    
+    </div>
+  );
+}
